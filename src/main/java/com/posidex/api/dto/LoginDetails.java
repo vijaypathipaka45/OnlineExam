@@ -7,6 +7,8 @@ public class LoginDetails {
 	private String password;
 	
 	private boolean loginStatus;
+	
+	
 
 	public String getEmailId() {
 		return emailId;
