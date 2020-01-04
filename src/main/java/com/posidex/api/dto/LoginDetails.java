@@ -5,6 +5,8 @@ public class LoginDetails {
 	private String emailId;
 	
 	private String password;
+	
+	private boolean loginStatus;
 
 	public String getEmailId() {
 		return emailId;
@@ -20,6 +22,14 @@ public class LoginDetails {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public boolean isLoginStatus() {
+		return loginStatus;
+	}
+
+	public void setLoginStatus(boolean loginStatus) {
+		this.loginStatus = loginStatus;
 	}
 
 	@Override
