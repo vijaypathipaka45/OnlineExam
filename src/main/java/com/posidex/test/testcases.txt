@@ -1,0 +1,311 @@
+1)Oopconcepts with examples
+2)relationships in java
+3)creating customized exception handler class with custom exception clsses explanation
+4)exception handling hararichy
+5)String questions constants pool and stack area and small quetions stringbuffer and stringbuilder questions
+6)multithreading questions on join,wait and excuterservice
+7)questions on collections
+8)internals of Arraylist Linkedlist HashSet and tree set
+9)internals of hashmap and concurentHashMap
+10)secondhighest salary for employee using java with streams
+11)java 8 features
+12)transaction management in database interaction
+13)jpa predefined methods and @query methods in japa
+14)flux and mono class type questions
+15 difference between map amd flatmap in java8
+16)operators in java terminal and intermidiate
+17)fredefined funtional interfaces
+18)Spring boot configurations and main class springboot
+19)about configuration beans
+20)datasource cretion giving that datasource to jpa repository and jdbc template
+21)MVC explanation
+22) DoXXC() methods(Get,Post,...)
+23)Restfull webservice all annotations
+24)Secondhiehest salary of employee sql Query
+25)How to read xml file in java
+26)How to break single ton design pattern
+27)difference between concoranthaspmap amd hashtable
+28)predefined functinal interfaces before and after java8
+29)when we can use runnable and callable
+30)how read 10 million records from Database at a time and display these records in UI
+=======================================================================
+output f thebelow code
+-----------------------
+public class TestTest {
+	static int a =10;
+	public static void main(String[] args) {
+		TestTest t1= new TestTest();
+		TestTest t2= new TestTest();
+
+t1.a=20;
+t2.a=30;
+System.out.println("###########"+t1.a);
+System.out.println(t2.a);
+	}
+}
+
+===============================================================================
+
+second highest number in array:
+------------------------------
+int first,second;
+for(int i=0;i<arr.Length;i++){
+if(first<arr[i]){
+second=first;
+first=arr[i];
+}
+}
+===========================================================================
+finding largest polindrme:
+--------------------------
+String strarr[]={aa,aba,bb,ababa}
+List<String> li=new ArrayList<String>();
+
+for(int i=0;i<strarr.Length;i++){
+StringBuffer sb=New StringBuffer(strarr[i]);
+if(sb.reverse().equals(strarr[i]){
+li.add[strarr[i]
+}
+}
+int length=0;
+for(String str:li){
+if(length<str.length){
+lenght=str.length;
+}
+}
+System.out.println(length)
+========================================================================
+sum of two elements equals 7 and its finding indexes
+------------------------------------------------------
+
+int[] numArr={1,2,3,4,5,6,7,8,9,10}
+Map<Integer,Integer[]> map=new HashMap<>();
+int num=1;
+for(int i=0;i<numArr.length;i++){
+
+  for(int j=i+1;j<numArr.length;j++){
+  
+  if(numArr[i]+numArr[j]==7){
+  
+  map.put(num,{i,j});
+  num++
+  }
+  
+  }
+
+}
+
+map.entrySet().forEach(m->{
+system.out.println("indexes"+m.getEntry().getValue());
+
+});
+===============================================================
+output from below program
+--------------------------
+public int get(){
+
+try{
+
+//exception occurs
+
+return 1;
+
+}
+
+catch(Exception e){
+
+return 2;
+
+}
+
+finally{
+
+ return 3;  
+
+}
+
+}
+====================================================================
+Write a program to Print the integers from 1 to 100,
+but for the multiples of 3, print "Fizz" instead of number and
+for multiples of 5, print "Buzz" instead of number and
+for multiples of both 3 and 5, print "FizzBuzz"
+------------------------------------
+public void main(String []args){
+for(int i=1;i<=100;i++) {
+			if(i%3==0&&i%5==0) {
+				System.out.println("FizzBuzz");
+			}
+			else if(i%3==0) {
+				System.out.println("Fizz");
+			}
+			else if(i%5==0) {
+				System.out.println("Buzz");
+			}
+			else {
+				System.out.println(i);
+			}
+		}
+	}	
+=======================================================		
+output from below program:
+--------------------------
+
+class A{
+public void get(){
+s.o.p("Hello");
+}
+}
+class B extends A{
+public void get() throws IOException{
+s.o.p("Hi");
+}
+}
+=======================================================
+output from below program:
+--------------------------Class A{
+p s v main(){
+A a = new A();
+List list =new ArrayList();  
+list.add(10);
+  a.change(list);
+  System.out.print(list.size());
+}
+
+public void change(List list){
+
+   list = null;
+}
+}
+=============================================================
+=======================================================================
+creating Map from list and desendingorder modifying data based on marks:
+========================================================================
+List<Student> slist=new ArrayList<Student>()
+student =>marks,name and id
+Map<Integer,Student> updatedmap=slist.stream.Sorted(s->Compareto(0)).map(s->{
+if(s.getMarks<30){s.setMarks(s.getMarks+30)
+ }
+else{s.setMarks(s.getmarks+20);
+}return std;
+}).collect(Collectors.toMap(Student::Id,Function.Identity(),(newvalue,oldValue)->newValue,TreeMap::new);
+
+
+
+printing map using Stream:
+=========================
+updatedmap.entrySet().ForEach(System.out.println(entry.getkey+"  "+entry.getValue()));
+
+========================
+Spring security
+jwt token
+boot security
+12 principles of microservice
+rabbitmq poc
+raddish cache
+configuration server springcloud
+======================
+output of below program
+=======================
+public class A {​​​
+void m1() {​​​
+System.out.println("i am inside parent");
+}​​​
+}​​​
+public class B extends A {​​​
+
+public void m1() throws IllegalArgumentException {​​​
+System.out.println("i am inside child");
+}​​​
+ public static void main(String[] args) {​​​
+A a1 = new B();
+a1.m1();
+}​​​
+}​​​
+==============================
+output of below
+================
+import java.util.Set;
+public class Account {
+private String id;
+private String name;
+private Double amount;
+public Account(final String id, final String name, final Double amount) {
+this.id = id;
+this.name = name;
+this.amount = amount;
+}
+public static void main(String[] args) {
+Account a1 = new Account("1", "acc1", 30000.0);
+Account a2 = new Account("1", "acc1", 30000.0);
+Account a3 = new Account("2", "acc2", 30000.0);
+Account a4 = new Account("3", "acc3", 30000.0);
+Set<Account> accounts = new HashSet<>(4);
+accounts.add(a1);
+accounts.add(a2);
+accounts.add(a3);
+accounts.add(a4);
+System.out.println(accounts.size());
+}
+=============================================================
+@RsetController
+public class Patient{
+
+@Autowired
+private PatientRepo prepo;
+
+@PostMapping("/savepatient")
+public boolean savePatient(@RequsetBody PtientDto){
+
+return prepo.save(PtientDto);
+
+}
+}
+@Repository
+public PatientRepo implemets CrudRepository<PtientDto>{
+}
+
+
+@Mock
+PatientRepo patientRepo;
+@InjectMock
+Patient patient;
+@Test
+public void patientTest(){
+PtientDto dto=new PtientDto();
+
+boolean value=true;
+Mockito.when(patientRepo.save(dto)).thenRetun(value);
+Mockito.perform("localhost:8080/savePatitient",{"patientobject json data"},Http.Post).resposne(Http.OK);
+
+}
+}
+========================================================================
+Analyz below program:
+=====================
+/* static void subString(char str[], int n) { 
+        // Pick starting point 
+        for (int len = 1; len <= n; len++) { 
+            // Pick ending point 
+            for (int i = 0; i <= n - len; i++) { 
+                //  Print characters from current 
+                // starting point to current ending 
+                // point.   
+                int j = i + len - 1; 
+                for (int k = i; k <= j; k++) { 
+                    System.out.print(str[k]); 
+                } 
+  
+                System.out.println(); 
+            } 
+        } 
+    } 
+  
+// Driver program to test above function 
+    public static void main(String[] args) { 
+        char str[] = {'a', 'a', 'b','b'}; 
+        subString(str, str.length); 
+  
+    } */
+=========================================================	
+
