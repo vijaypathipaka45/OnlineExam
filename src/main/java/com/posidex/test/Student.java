@@ -5,6 +5,20 @@ public class Student  {
 	private String firstName;
 	private String lastName;
 	private int age;
+	private int marks;
+	private int id;
+	public int getMarks() {
+		return marks;
+	}
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
