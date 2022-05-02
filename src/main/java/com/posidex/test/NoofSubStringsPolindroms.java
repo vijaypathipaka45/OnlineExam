@@ -23,7 +23,7 @@ public class NoofSubStringsPolindroms {
 					//System.out.println(substr+"  palindrome");
 				}
 				else {
-					System.out.println(substr);
+					System.out.println("==="+substr);
 					//System.out.println(substr+" notpolindrome");
 					reArrangingString(substr);
 					

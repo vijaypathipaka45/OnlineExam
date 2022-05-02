@@ -14,19 +14,86 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
-//
-//import java.time.LocalDate;
-//import java.time.Month;
-//import java.time.temporal.ChronoUnit;
-//import java.util.ArrayList;
-//import java.util.Arrays;
-//import java.util.List;
-//import java.util.stream.Collectors;
-//import java.util.stream.Stream;
-//
 public class Test {
-
-	
+	public static void skippingNumbersinAnArray() {
+			System.out.println("skipping numbers in array");	
+			int arr[]= {0,11,2,4,5,6,8,10,1};
+			Arrays.sort(arr);
+			int len=arr[arr.length-1];
+			//if the array starts with 0 element create temp arraysize//len+1 and for loop starts with zero
+			int temp[]=new int[len+1];
+			for(int i=0;i<arr.length;i++) {
+				int num=arr[i];
+				temp[num]=num;
+			}		
+			for(int i=0;i<temp.length;i++) {
+				if(temp[i]==i) {}else {System.out.print(i+" ");}
+			}
+		System.out.println();
+	}
+	public static void removingDuplicateElementsInAnArray() {
+		System.out.println("removing duplicate elements from array ");
+			int arr[]= {1,2,23,10,5,11,6000,6000,7,8,8,2,88,1,13,1000,1000,3000,2000,2000,68,68};		
+			Arrays.sort(arr);
+			int temp[]=new int[arr.length];
+			int j=0;
+			if(arr.length>0 && arr.length>1) {
+				
+				for(int i=0;i<arr.length-1;i++) {
+					if(arr[i]==arr[i+1]) {
+						
+					}else {
+						temp[j]=arr[i];
+						j++;
+					}				
+				}			
+				temp[j]=arr[arr.length-1];
+				
+			}
+			for(int i=0;i<=j;i++) {
+				System.out.print(temp[i]+" ");
+			}
+		System.out.println();	
+		
+	}
+	/*sorting an array*/
+	public static void bubbleSortSortingAnArray() {
+		int arr[]= {1,2,3,10,5,11,7,8,88,13,1000,68};
+		
+		for(int i=0;i<arr.length;i++) {
+			
+			for(int j=i+1;j<arr.length;j++) {
+				
+				if(arr[i]>arr[j]) {
+					
+				int temp=arr[j];
+				arr[j]=arr[i];
+				arr[i]=temp;
+				
+				}
+				
+			}
+		}
+	System.out.println("sorting array");	
+	for(int i=0;i<arr.length;i++) {
+		
+		System.out.print(arr[i]+" ");
+	}
+	System.out.println();
+	}
+	/* reverse integer*/
+	public static void reverseInteger() {
+		int input=12345;
+		int output=0;
+		while(input>0) {
+			
+			int rem=input%10;
+			input=input/10;
+			output=rem+output*10;
+			
+		}
+		System.out.println("reverse number "+output);
+	}
 	public void robotActions() {		
 		//A robot can only move in four directions , UP(U), DOWN(D),LEFT(L),RIGHT(R). Given a string consisting of instructions to move , output the co-ordinates of robot after the executing the instructions. Initial position of robot is at origin(0,0).
 		//	LURLDRURLD
@@ -58,9 +125,10 @@ public class Test {
 	}
 	
 	public void filteringmultiflyingUsingJava8() {
+		System.out.println("filtering even numbers and multiflying with 10");
 		List<Integer> list= Arrays.asList(1,2,3,4,5,6);
 		 
-		List<Integer> evenlist=list.stream().filter(evenint-> evenint%2==0).collect(Collectors.toList());
+		List<Integer> evenlist=list.stream().filter(evenint-> evenint%2==0 ).collect(Collectors.toList());
 		 
 		List<Integer> emultivenlist= evenlist.stream().map(i->i*10).collect(Collectors.toList());		 
 		 
@@ -70,10 +138,17 @@ public class Test {
 	
 	public void twoDatesBetweenNoofDaysJava8() {
 		
-		LocalDate dateOfBirth = LocalDate.of(2021, Month.JULY, 25);
+		LocalDate dateOfBirth = LocalDate.of(2021, Month.SEPTEMBER, 9);
 		LocalDate currentDate = LocalDate.now();
 		long diffInDays = ChronoUnit.DAYS.between(dateOfBirth, currentDate);
-		System.out.println("noof days"+diffInDays);
+		long weeks =ChronoUnit.WEEKS.between(dateOfBirth, currentDate);
+		
+		System.out.println("noof weeks  "+weeks);
+		System.out.println("noof days   "+diffInDays);
+		long rem=diffInDays%7;
+		long w=diffInDays/7;
+		
+		System.out.println("noof weeks "+w+"  days  "+rem);
 		
 	}
 	
@@ -270,6 +345,14 @@ private Student getStudent(Student s) {
 }
 
 public static void main(String[] args) {
+	skippingNumbersinAnArray();
+	System.out.println("==================================");
+	removingDuplicateElementsInAnArray();
+	System.out.println("==================================");
+	bubbleSortSortingAnArray();
+	System.out.println("==================================");
+	reverseInteger();
+	System.out.println("==================================");
 	Test t=new Test();
 	t.robotActions();
 	System.out.println("=================================================");

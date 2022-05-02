@@ -29,7 +29,7 @@
 29)when we can use runnable and callable
 30)how read 10 million records from Database at a time and display these records in UI
 =======================================================================
-output f thebelow code
+output of thebelow code
 -----------------------
 public class TestTest {
 	static int a =10;
